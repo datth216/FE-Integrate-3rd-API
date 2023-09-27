@@ -36,3 +36,7 @@
 .site-layout .site-layout-background {
   background: #fff;
 }
+
+.ant-form-item-label label {
+  min-width: 90px;
+}
