@@ -1,11 +1,26 @@
-import './App.css'
+import { Layout } from 'antd'
+import 'antd/dist/antd.css'
+import React from 'react'
+import FooterComponent from './components/Footer'
+import HeaderComponent from './components/Header'
+import SiderComponent from './components/Sider'
+import './index.css'
+import OrderFeature from './features/Order'
 
-function App() {
+const App = () => {
   return (
-    <>
-      <h1 className='text-5xl text-red-700 font-bold'>Vite + React</h1>
-    </>
+    <Layout
+      style={{
+        minHeight: '100vh'
+      }}
+    >
+      <SiderComponent />
+      <Layout className='site-layout'>
+        <HeaderComponent />
+        <OrderFeature />
+        <FooterComponent />
+      </Layout>
+    </Layout>
   )
 }
-
 export default App
