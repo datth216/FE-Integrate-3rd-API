@@ -93,7 +93,7 @@ function CreateOrder() {
           <Shipping />
           <Total />
           <Form.Item>
-            <Button type='primary' htmlType='submit' className='bg-[#1890ff]'>
+            <Button type='primary' htmlType='submit' className='bg-[#1890ff] ml-6'>
               Submit
             </Button>
           </Form.Item>
