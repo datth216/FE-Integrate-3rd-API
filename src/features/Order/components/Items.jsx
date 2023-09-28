@@ -13,7 +13,7 @@ function Items() {
           lg: 32
         }}
       >
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='SKU'
             name='sku'
@@ -27,7 +27,7 @@ function Items() {
             <Input />
           </Form.Item>
         </Col>
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Category'
             name='category'
@@ -50,7 +50,7 @@ function Items() {
           lg: 32
         }}
       >
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Name'
             name='nameItem'
@@ -64,7 +64,7 @@ function Items() {
             <Input maxLength={10} />
           </Form.Item>
         </Col>
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Quantity'
             name='quantity'
@@ -88,7 +88,7 @@ function Items() {
           lg: 32
         }}
       >
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Price'
             name='price'
@@ -103,7 +103,7 @@ function Items() {
             <Input prefix={<EuroCircleOutlined />} />
           </Form.Item>
         </Col>
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item name='subcategory' label='Subcategory'>
             <Select mode='multiple'>
               <Select.Option value='shirt'>Shirt</Select.Option>
@@ -120,12 +120,12 @@ function Items() {
           lg: 32
         }}
       >
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item label='PageUrl' name='pageUrl'>
             <Input />
           </Form.Item>
         </Col>
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item label='ImageUrl' name='imageUrl'>
             <Input />
           </Form.Item>
@@ -139,7 +139,7 @@ function Items() {
           lg: 32
         }}
       >
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item label='Gtin' name='gtin'>
             <Input />
           </Form.Item>

@@ -12,7 +12,7 @@ function Consumer() {
           lg: 32
         }}
       >
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='First Name'
             name='givenNames'
@@ -26,7 +26,7 @@ function Consumer() {
             <Input />
           </Form.Item>
         </Col>
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Last Name'
             name='surname'
@@ -49,7 +49,7 @@ function Consumer() {
           lg: 32
         }}
       >
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Phone'
             name='phoneNumber'
@@ -63,7 +63,7 @@ function Consumer() {
             <Input maxLength={10} />
           </Form.Item>
         </Col>
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Email'
             name='email'

@@ -12,7 +12,7 @@ function Shipping() {
           lg: 32
         }}
       >
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='CTC'
             name='countryCode'
@@ -28,7 +28,7 @@ function Shipping() {
             <Input />
           </Form.Item>
         </Col>
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Post code'
             name='postcode'
@@ -52,7 +52,7 @@ function Shipping() {
           lg: 32
         }}
       >
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Name'
             name='nameShipping'
@@ -66,7 +66,7 @@ function Shipping() {
             <Input />
           </Form.Item>
         </Col>
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Adress'
             name='line1'
@@ -89,7 +89,7 @@ function Shipping() {
           lg: 32
         }}
       >
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Suburb'
             name='suburb'
@@ -103,7 +103,7 @@ function Shipping() {
             <Input />
           </Form.Item>
         </Col>
-        <Col className='gutter-row' span={12}>
+        <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Phone'
             name='phoneShipping'

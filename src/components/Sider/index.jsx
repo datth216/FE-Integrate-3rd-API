@@ -33,9 +33,14 @@ const items = [
 function SiderComponent() {
   const [collapsed, setCollapsed] = useState(false)
   return (
-    <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+    <Sider
+      className='hideOnMobile'
+      collapsible
+      collapsed={collapsed}
+      onCollapse={(value) => setCollapsed(value)}
+    >
       <div className='logo' />
-      <Menu theme='dark' defaultSelectedKeys={['1']} mode='inline' items={items} />
+      <Menu theme='dark' defaultSelectedKeys={['1']} mode='vertical' items={items} />
     </Sider>
   )
 }
