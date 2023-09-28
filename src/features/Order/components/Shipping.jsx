@@ -1,5 +1,4 @@
-import { EuroCircleOutlined } from '@ant-design/icons'
-import { Card, Col, Form, Input, InputNumber, Row, Select } from 'antd'
+import { Card, Col, Form, Input, Row } from 'antd'
 import React from 'react'
 
 function Shipping() {
@@ -15,7 +14,7 @@ function Shipping() {
       >
         <Col className='gutter-row' span={12}>
           <Form.Item
-            label='Country Code'
+            label='CTC'
             name='countryCode'
             rules={[
               {

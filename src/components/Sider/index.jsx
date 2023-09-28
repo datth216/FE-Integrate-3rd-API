@@ -1,4 +1,10 @@
-import { UnorderedListOutlined } from '@ant-design/icons'
+import {
+  AreaChartOutlined,
+  HeatMapOutlined,
+  ShoppingCartOutlined,
+  UnorderedListOutlined,
+  UserOutlined
+} from '@ant-design/icons'
 import { Layout, Menu } from 'antd'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -17,7 +23,11 @@ const { Sider } = Layout
 const items = [
   getItem('Order', 'sub1', <UnorderedListOutlined />, [
     getItem('Create', '1', <Link to='/order/create'></Link>)
-  ])
+  ]),
+  getItem('Product', 'sub2', <ShoppingCartOutlined />),
+  getItem('Account', 'sub3', <UserOutlined />),
+  getItem('Analysis', 'sub4', <AreaChartOutlined />),
+  getItem('Exception', 'sub5', <HeatMapOutlined />)
 ]
 
 function SiderComponent() {
