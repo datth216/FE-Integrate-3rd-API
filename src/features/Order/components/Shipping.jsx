@@ -2,9 +2,9 @@ import { EuroCircleOutlined } from '@ant-design/icons'
 import { Card, Col, Form, Input, InputNumber, Row, Select } from 'antd'
 import React from 'react'
 
-function Items() {
+function Shipping() {
   return (
-    <Card title='Items' bordered={false}>
+    <Card title='Shipping' bordered={false}>
       <Row
         gutter={{
           xs: 8,
@@ -15,12 +15,14 @@ function Items() {
       >
         <Col className='gutter-row' span={12}>
           <Form.Item
-            label='SKU'
-            name='sku'
+            label='Country Code'
+            name='countryCode'
             rules={[
               {
+                min: '2',
+                max: 2,
                 required: true,
-                message: 'Please input your sku!'
+                message: 'Please input your country code!'
               }
             ]}
           >
@@ -29,12 +31,13 @@ function Items() {
         </Col>
         <Col className='gutter-row' span={12}>
           <Form.Item
-            label='Category'
-            name='category'
+            label='Post code'
+            name='postcode'
             rules={[
               {
                 required: true,
-                message: 'Please input your category!'
+                pattern: new RegExp(/^[0-9]+$/),
+                message: 'Please input your post code!'
               }
             ]}
           >
@@ -53,95 +56,66 @@ function Items() {
         <Col className='gutter-row' span={12}>
           <Form.Item
             label='Name'
-            name='nameItem'
+            name='nameShipping'
             rules={[
               {
                 required: true,
-                message: 'Please input your name item!'
+                message: 'Please input your name!'
+              }
+            ]}
+          >
+            <Input />
+          </Form.Item>
+        </Col>
+        <Col className='gutter-row' span={12}>
+          <Form.Item
+            label='Adress'
+            name='line1'
+            rules={[
+              {
+                required: true,
+                message: 'Please input your adress!'
+              }
+            ]}
+          >
+            <Input />
+          </Form.Item>
+        </Col>
+      </Row>
+      <Row
+        gutter={{
+          xs: 12,
+          sm: 16,
+          md: 24,
+          lg: 32
+        }}
+      >
+        <Col className='gutter-row' span={12}>
+          <Form.Item
+            label='Suburb'
+            name='suburb'
+            rules={[
+              {
+                required: true,
+                message: 'Please input suburb!'
+              }
+            ]}
+          >
+            <Input />
+          </Form.Item>
+        </Col>
+        <Col className='gutter-row' span={12}>
+          <Form.Item
+            label='Phone'
+            name='phoneShipping'
+            rules={[
+              {
+                pattern: new RegExp(/^[0-9]+$/),
+                message: 'Please enter your phone!'
               }
             ]}
           >
             <Input maxLength={10} />
-          </Form.Item>
-        </Col>
-        <Col className='gutter-row' span={12}>
-          <Form.Item
-            label='Quantity'
-            name='quantity'
-            rules={[
-              {
-                required: true,
-                pattern: new RegExp(/^[0-9]+$/),
-                message: 'Please input your quantity!'
-              }
-            ]}
-          >
-            <InputNumber min={1} />
-          </Form.Item>
-        </Col>
-      </Row>
-      <Row
-        gutter={{
-          xs: 12,
-          sm: 16,
-          md: 24,
-          lg: 32
-        }}
-      >
-        <Col className='gutter-row' span={12}>
-          <Form.Item
-            label='Price'
-            name='price'
-            rules={[
-              {
-                required: true,
-                pattern: new RegExp(/^[0-9]+$/),
-                message: 'Price is required!'
-              }
-            ]}
-          >
-            <Input prefix={<EuroCircleOutlined />} />
-          </Form.Item>
-        </Col>
-        <Col className='gutter-row' span={12}>
-          <Form.Item name='subcategory' label='Subcategory'>
-            <Select mode='multiple'>
-              <Select.Option value='shirt'>Shirt</Select.Option>
-              <Select.Option value='short'>Short</Select.Option>
-            </Select>
-          </Form.Item>
-        </Col>
-      </Row>
-      <Row
-        gutter={{
-          xs: 12,
-          sm: 16,
-          md: 24,
-          lg: 32
-        }}
-      >
-        <Col className='gutter-row' span={12}>
-          <Form.Item label='PageUrl' name='pageUrl'>
-            <Input />
-          </Form.Item>
-        </Col>
-        <Col className='gutter-row' span={12}>
-          <Form.Item label='ImageUrl' name='imageUrl'>
-            <Input />
-          </Form.Item>
-        </Col>
-      </Row>
-      <Row
-        gutter={{
-          xs: 12,
-          sm: 16,
-          md: 24,
-          lg: 32
-        }}
-      >
-        <Col className='gutter-row' span={12}>
-          <Form.Item label='Gtin' name='gtin'>
-            <Input />
           </Form.Item>
         </Col>
       </Row>
@@ -149,4 +123,4 @@ function Items() {
   )
 }
 
-export default Items
+export default Shipping

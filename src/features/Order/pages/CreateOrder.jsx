@@ -2,6 +2,7 @@ import { Breadcrumb, Button, Form, Layout } from 'antd'
 import React, { useEffect } from 'react'
 import Consumer from '../components/Consumer'
 import Items from '../components/Items'
+import Shipping from '../components/Shipping'
 
 function CreateOrder() {
   const { Content } = Layout
@@ -15,13 +16,19 @@ function CreateOrder() {
       phoneNumber: '0400000001',
       sku: '12341234',
       category: 'clothes',
-      name: 'T-Shirt',
+      nameItem: 'T-Shirt',
       quantity: 1,
       price: '10',
       subcategory: ['short', 'shirt'],
       pageUrl: 'https://www.scalapay.com//product/view/',
       imageUrl: 'https://www.scalapay.com//product/view/',
-      gtin: '123458791330'
+      gtin: '123458791330',
+      countryCode: 'IT',
+      postcode: '50056',
+      nameShipping: 'Joe Consumer',
+      line1: 'Via della Rosa, 58',
+      suburb: 'Montelupo Fiorentino',
+      phoneShipping: '0400000000'
     })
   }, [])
 
@@ -36,7 +43,7 @@ function CreateOrder() {
       items: [
         {
           sku: values.sku,
-          name: values.name,
+          name: values.nameItem,
           category: values.category,
           quantity: values.quantity,
           price: {
@@ -48,7 +55,15 @@ function CreateOrder() {
           imageUrl: values.imageUrl,
           gtin: values.gtin
         }
-      ]
+      ],
+      shipping: {
+        countryCode: values.countryCode,
+        postcode: values.postcode,
+        name: values.nameShipping,
+        line1: values.line1,
+        suburb: values.suburb,
+        phoneNumber: values.phoneShipping
+      }
     }
     form.resetFields()
     console.log(newValue)
@@ -81,6 +96,7 @@ function CreateOrder() {
         <Form onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete='off' form={form}>
           <Consumer />
           <Items />
+          <Shipping />
           <Form.Item>
             <Button type='primary' htmlType='submit'>
               Submit
