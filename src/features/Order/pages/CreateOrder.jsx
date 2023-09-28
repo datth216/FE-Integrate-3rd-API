@@ -5,6 +5,7 @@ import Items from '../components/Items'
 import Shipping from '../components/Shipping'
 import Total from '../components/Total'
 import { DEFAULT_VALUE } from '../../../constants/common'
+import orderApi from '../../../api/orderApi'
 
 function CreateOrder() {
   const { Content } = Layout
@@ -14,7 +15,7 @@ function CreateOrder() {
     form.setFieldsValue(DEFAULT_VALUE)
   }, [])
 
-  const onFinish = (values) => {
+  const onFinish = async (values) => {
     let newValue = {
       consumer: {
         givenNames: values.givenNames,
@@ -52,8 +53,14 @@ function CreateOrder() {
         redirectCancelUrl: 'https://portal.integration.scalapay.com/failure-url'
       }
     }
-    form.resetFields()
-    console.log(newValue)
+
+    try {
+      // const data = await orderApi.add(newValue)
+      console.log('Success:', newValue)
+      form.resetFields()
+    } catch (error) {
+      // console.log(error.message)
+    }
   }
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo)
