@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import Consumer from '../components/Consumer'
 import Items from '../components/Items'
 import Shipping from '../components/Shipping'
+import Total from '../components/Total'
 
 function CreateOrder() {
   const { Content } = Layout
@@ -28,7 +29,8 @@ function CreateOrder() {
       nameShipping: 'Joe Consumer',
       line1: 'Via della Rosa, 58',
       suburb: 'Montelupo Fiorentino',
-      phoneShipping: '0400000000'
+      phoneShipping: '0400000000',
+      totalAmount: '190'
     })
   }, [])
 
@@ -63,6 +65,11 @@ function CreateOrder() {
         line1: values.line1,
         suburb: values.suburb,
         phoneNumber: values.phoneShipping
+      },
+      totalAmount: { currency: 'EUR', amount: values.totalAmount },
+      merchant: {
+        redirectConfirmUrl: 'https://portal.integration.scalapay.com/success-url',
+        redirectCancelUrl: 'https://portal.integration.scalapay.com/failure-url'
       }
     }
     form.resetFields()
@@ -97,8 +104,9 @@ function CreateOrder() {
           <Consumer />
           <Items />
           <Shipping />
+          <Total />
           <Form.Item>
-            <Button type='primary' htmlType='submit'>
+            <Button type='primary' htmlType='submit' className='bg-[#1890ff]'>
               Submit
             </Button>
           </Form.Item>

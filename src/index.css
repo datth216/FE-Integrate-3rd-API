@@ -40,3 +40,7 @@
 .ant-form-item-label label {
   min-width: 90px;
 }
+
+#totalAmount {
+  color: red;
+}
