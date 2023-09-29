@@ -6,7 +6,7 @@ import {
   UserOutlined
 } from '@ant-design/icons'
 import { Layout, Menu } from 'antd'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function getItem(label, key, icon, children) {

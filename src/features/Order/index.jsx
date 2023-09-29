@@ -1,7 +1,6 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import CreateOrder from './pages/CreateOrder'
+import { Route, Routes } from 'react-router-dom'
 import Error from '../../components/Error'
+import CreateOrder from './pages/CreateOrder'
 
 function OrderFeature() {
   return (

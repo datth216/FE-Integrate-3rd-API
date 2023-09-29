@@ -50,3 +50,9 @@
     display: none;
   }
 }
+
+.ant-message-notice-content svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
