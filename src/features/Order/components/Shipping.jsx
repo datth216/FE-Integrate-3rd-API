@@ -1,16 +1,10 @@
+import { GUTTER_SPACING } from '@/constants'
 import { Card, Col, Form, Input, Row } from 'antd'
 
 function Shipping() {
   return (
     <Card title='Shipping' bordered={false}>
-      <Row
-        gutter={{
-          xs: 8,
-          sm: 16,
-          md: 24,
-          lg: 32
-        }}
-      >
+      <Row gutter={GUTTER_SPACING}>
         <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='CTC'
@@ -43,14 +37,7 @@ function Shipping() {
           </Form.Item>
         </Col>
       </Row>
-      <Row
-        gutter={{
-          xs: 12,
-          sm: 16,
-          md: 24,
-          lg: 32
-        }}
-      >
+      <Row gutter={GUTTER_SPACING}>
         <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Name'
@@ -80,14 +67,7 @@ function Shipping() {
           </Form.Item>
         </Col>
       </Row>
-      <Row
-        gutter={{
-          xs: 12,
-          sm: 16,
-          md: 24,
-          lg: 32
-        }}
-      >
+      <Row gutter={GUTTER_SPACING}>
         <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Suburb'

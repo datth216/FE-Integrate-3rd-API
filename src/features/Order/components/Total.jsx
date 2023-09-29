@@ -1,17 +1,11 @@
+import { GUTTER_SPACING } from '@/constants'
 import { EuroCircleOutlined } from '@ant-design/icons'
 import { Card, Col, Form, Input, Row } from 'antd'
 
 function Total() {
   return (
     <Card title='Total' extra bordered={false}>
-      <Row
-        gutter={{
-          xs: 8,
-          sm: 16,
-          md: 24,
-          lg: 32
-        }}
-      >
+      <Row gutter={GUTTER_SPACING}>
         <Col className='gutter-row' span={24}>
           <Form.Item
             label='Total Amount'

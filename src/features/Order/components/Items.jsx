@@ -1,17 +1,11 @@
+import { GUTTER_SPACING } from '@/constants'
 import { EuroCircleOutlined } from '@ant-design/icons'
 import { Card, Col, Form, Input, InputNumber, Row, Select } from 'antd'
 
 function Items() {
   return (
     <Card title='Items' bordered={false}>
-      <Row
-        gutter={{
-          xs: 8,
-          sm: 16,
-          md: 24,
-          lg: 32
-        }}
-      >
+      <Row gutter={GUTTER_SPACING}>
         <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='SKU'
@@ -41,14 +35,7 @@ function Items() {
           </Form.Item>
         </Col>
       </Row>
-      <Row
-        gutter={{
-          xs: 12,
-          sm: 16,
-          md: 24,
-          lg: 32
-        }}
-      >
+      <Row gutter={GUTTER_SPACING}>
         <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Name'
@@ -79,14 +66,7 @@ function Items() {
           </Form.Item>
         </Col>
       </Row>
-      <Row
-        gutter={{
-          xs: 12,
-          sm: 16,
-          md: 24,
-          lg: 32
-        }}
-      >
+      <Row gutter={GUTTER_SPACING}>
         <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item
             label='Price'
@@ -111,14 +91,7 @@ function Items() {
           </Form.Item>
         </Col>
       </Row>
-      <Row
-        gutter={{
-          xs: 12,
-          sm: 16,
-          md: 24,
-          lg: 32
-        }}
-      >
+      <Row gutter={GUTTER_SPACING}>
         <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item label='PageUrl' name='pageUrl'>
             <Input />
@@ -130,14 +103,7 @@ function Items() {
           </Form.Item>
         </Col>
       </Row>
-      <Row
-        gutter={{
-          xs: 12,
-          sm: 16,
-          md: 24,
-          lg: 32
-        }}
-      >
+      <Row gutter={GUTTER_SPACING}>
         <Col className='gutter-row' span={12} xs={24} sm={12}>
           <Form.Item label='Gtin' name='gtin'>
             <Input />
