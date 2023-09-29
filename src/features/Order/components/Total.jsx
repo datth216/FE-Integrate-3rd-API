@@ -1,6 +1,5 @@
 import { EuroCircleOutlined } from '@ant-design/icons'
 import { Card, Col, Form, Input, Row } from 'antd'
-import React from 'react'
 
 function Total() {
   return (

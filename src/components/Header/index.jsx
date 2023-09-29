@@ -1,6 +1,5 @@
 import { UserOutlined } from '@ant-design/icons'
 import { Avatar, Layout } from 'antd'
-import React from 'react'
 
 function HeaderComponent() {
   const { Header } = Layout

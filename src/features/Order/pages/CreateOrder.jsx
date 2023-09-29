@@ -1,7 +1,7 @@
+import orderApi from '@/api/orderApi'
+import { DEFAULT_VALUE } from '@/constants'
 import { Breadcrumb, Button, Form, Layout, message } from 'antd'
 import { useEffect } from 'react'
-import orderApi from '../../../api/orderApi'
-import { DEFAULT_VALUE } from '../../../constants/common'
 import Consumer from '../components/Consumer'
 import Items from '../components/Items'
 import Shipping from '../components/Shipping'
@@ -55,18 +55,17 @@ function CreateOrder() {
       }
     }
     form.resetFields()
-    messageApi.open({
-      type: 'success',
-      content: 'Submitted sucessfully'
-    })
 
     try {
       const response = await orderApi.add(newValue)
       const result = await response.data
-
+      messageApi.open({
+        type: 'success',
+        content: 'Submitted'
+      })
       setTimeout(() => {
         window.location.replace(result.checkoutUrl)
-      }, 2000)
+      }, 1000)
     } catch (error) {
       console.log(error.message)
     }
