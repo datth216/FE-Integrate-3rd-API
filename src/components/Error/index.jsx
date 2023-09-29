@@ -1,8 +1,6 @@
-import errorImg from '../../assets/error.svg'
-import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Error(props) {
+function Error() {
   return (
     <div className='h-full text-center pt-2'>
       <h3>Ohh! Page Not Found</h3>

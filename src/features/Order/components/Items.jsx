@@ -1,6 +1,5 @@
 import { EuroCircleOutlined } from '@ant-design/icons'
 import { Card, Col, Form, Input, InputNumber, Row, Select } from 'antd'
-import React from 'react'
 
 function Items() {
   return (
