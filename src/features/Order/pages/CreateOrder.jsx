@@ -1,15 +1,16 @@
-import { Breadcrumb, Button, Form, Layout } from 'antd'
-import React, { useEffect } from 'react'
+import { Breadcrumb, Button, Form, Layout, message } from 'antd'
+import { useEffect } from 'react'
+import orderApi from '../../../api/orderApi'
+import { DEFAULT_VALUE } from '../../../constants/common'
 import Consumer from '../components/Consumer'
 import Items from '../components/Items'
 import Shipping from '../components/Shipping'
 import Total from '../components/Total'
-import { DEFAULT_VALUE } from '../../../constants/common'
-import orderApi from '../../../api/orderApi'
 
 function CreateOrder() {
   const { Content } = Layout
   const [form] = Form.useForm()
+  const [messageApi, contextHolder] = message.useMessage()
 
   useEffect(() => {
     form.setFieldsValue(DEFAULT_VALUE)
@@ -53,13 +54,21 @@ function CreateOrder() {
         redirectCancelUrl: 'https://portal.integration.scalapay.com/failure-url'
       }
     }
+    form.resetFields()
+    messageApi.open({
+      type: 'success',
+      content: 'Submitted sucessfully'
+    })
 
     try {
-      // const data = await orderApi.add(newValue)
-      console.log('Success:', newValue)
-      form.resetFields()
+      const response = await orderApi.add(newValue)
+      const result = await response.data
+
+      setTimeout(() => {
+        window.location.replace(result.checkoutUrl)
+      }, 2000)
     } catch (error) {
-      // console.log(error.message)
+      console.log(error.message)
     }
   }
   const onFinishFailed = (errorInfo) => {
@@ -87,6 +96,7 @@ function CreateOrder() {
           minHeight: 360
         }}
       >
+        {contextHolder}
         <Form onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete='off' form={form}>
           <Consumer />
           <Items />
