@@ -1,5 +1,3 @@
-## Jung Talents Coding Assignment
-
 The goal is to write a simple app using the 3rd party API. In this assignment, we choose the Scalapay API and the docs can be found here: https://developers.scalapay.com/docs
 
 ## About this project
